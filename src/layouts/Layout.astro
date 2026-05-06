@@ -1,0 +1,30 @@
+---
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title} | All Things Central Oregon</title>
+		<meta name="description" content={description} />
+	</head>
+	<body style="background-color: #FAF9F6; font-family: system-ui, sans-serif; margin: 0; color: #3E332E;">
+		<nav style="background: #2D4F3E; color: white; padding: 1.5rem; border-bottom: 4px solid #E5732F;">
+			<div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+				<a href="/" style="color: white; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">All Things Central Oregon</a>
+				<div style="display: flex; gap: 20px; font-size: 0.9rem; font-weight: 600;">
+					<a href="/bend" style="color: white; text-decoration: none;">BEND</a>
+					<a href="/redmond" style="color: white; text-decoration: none;">REDMOND</a>
+					<a href="/sisters" style="color: white; text-decoration: none;">SISTERS</a>
+				</div>
+			</div>
+		</nav>
+		<main style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+			<slot />
+		</main>
+		<footer style="margin-top: 100px; padding: 40px; text-align: center; background: #f0eee9; color: #7a746e; font-size: 0.8rem;">
+			<p>&copy; 2026 All Things Central Oregon. Built by locals.</p>
+		</footer>
+	</body>
+</html>
