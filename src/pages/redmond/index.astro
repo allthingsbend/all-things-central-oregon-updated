@@ -1,13 +1,325 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+const title = "Redmond, Oregon Guide | Things To Do, Food, Airport Tips & Local Life";
+const description = "A practical local guide to Redmond, Oregon with things to do, food and drink, parks, neighborhoods, airport tips, nearby places, and Central Oregon travel ideas.";
 ---
-<Layout title="Redmond Guide" description="The local's guide to Redmond, Oregon.">
-	<h1 style="font-size: 3rem; margin-bottom: 10px;">Redmond</h1>
-	<p style="font-style: italic; color: #2D4F3E; border-left: 4px solid #2D4F3E; padding-left: 15px; font-size: 1.2rem;">
-		"The Hub of Central Oregon—where the sun always seems to find a way through."
-	</p>
-	<section style="margin-top: 40px; background: white; padding: 30px; border-radius: 12px; border: 1px solid #e5e1d8; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-		<h2>Local Intel</h2>
-		<p>We are currently building out guides for the Dry Canyon, Smith Rock access, and the best low-key spots in downtown Redmond.</p>
-	</section>
-</Layout>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://allthingscentraloregon.org/redmond/" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="logo" href="/">All Things Central Oregon</a>
+        <nav class="nav-links">
+          <a href="/bend/">Bend</a>
+          <a href="/redmond/">Redmond</a>
+          <a href="/sisters/">Sisters</a>
+          <a href="/sunriver/">Sunriver</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="kicker">Redmond, Oregon</div>
+        <h1>The Local Guide to Redmond</h1>
+        <p>
+          A practical guide to Redmond’s food, parks, airport access, neighborhoods,
+          nearby trails, family activities, and everyday Central Oregon life.
+        </p>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="intro-card">
+        <h2>Start Here</h2>
+        <p>
+          Redmond sits near the center of Central Oregon, which makes it one of the most
+          convenient home bases in the region. It has the airport, quick access to Bend,
+          Smith Rock, Terrebonne, Prineville, Sisters, and a growing mix of restaurants,
+          parks, neighborhoods, and local businesses.
+        </p>
+
+        <p>
+          This page is the Redmond hub for All Things Central Oregon. Over time, it will
+          connect to deeper guides on restaurants, coffee, breweries, family activities,
+          parks, airport tips, local events, neighborhoods, and outdoor trips near Redmond.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Quick Redmond Guide</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Best For</h3>
+            <p>
+              Airport access, Smith Rock day trips, family-friendly parks, more affordable
+              Central Oregon living, and easy regional travel.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Local Feel</h3>
+            <p>
+              More practical and less tourist-heavy than Bend, with a growing downtown,
+              strong community feel, and quick access in every direction.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Good To Know</h3>
+            <p>
+              Redmond is not just “north of Bend.” It has its own food scene, events,
+              neighborhoods, parks, and a very useful location.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Popular Redmond Guides</h2>
+        <p>
+          These are the main Redmond guides we are building out first.
+        </p>
+
+        <div class="guide-links">
+          <a class="guide-link" href="/redmond/things-to-do/">Things To Do in Redmond</a>
+          <a class="guide-link" href="/redmond/restaurants/">Best Restaurants in Redmond</a>
+          <a class="guide-link" href="/redmond/coffee/">Best Coffee Shops in Redmond</a>
+          <a class="guide-link" href="/redmond/breweries/">Breweries and Bars in Redmond</a>
+          <a class="guide-link" href="/redmond/parks/">Best Parks in Redmond</a>
+          <a class="guide-link" href="/redmond/airport/">Redmond Airport Guide</a>
+          <a class="guide-link" href="/redmond/family-activities/">Family Activities in Redmond</a>
+          <a class="guide-link" href="/redmond/day-trips/">Day Trips From Redmond</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>What Redmond Is Known For</h2>
+        <p>
+          Redmond is known as a central hub for the region. It is home to the main airport
+          for Central Oregon, sits close to Smith Rock, and offers easier access to several
+          nearby towns without always needing to drive through Bend.
+        </p>
+
+        <p>
+          It has also grown into a place people choose for daily life, not just convenience.
+          Downtown Redmond has more restaurants and local spots than many visitors expect,
+          and the city continues to expand with new neighborhoods, schools, parks, and
+          businesses.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Things To Do in Redmond by Season</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Spring</h3>
+            <p>
+              Good for Smith Rock, Dry Canyon walks, early patio days, youth sports,
+              and getting outside before summer heat builds.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Summer</h3>
+            <p>
+              Parks, fairs, events, patios, day trips, and evening activities once the
+              high desert sun starts to drop.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Fall</h3>
+            <p>
+              One of the best times for Smith Rock, local events, cooler walks, and
+              easier outdoor days around town.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Winter</h3>
+            <p>
+              Quieter town days, quick airport access, local restaurants, indoor family
+              activities, and mountain trips when roads allow.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Airport Travel</h3>
+            <p>
+              Redmond Airport is one of the biggest reasons people pass through town.
+              Parking, timing, and winter travel can all affect the experience.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Day Trips</h3>
+            <p>
+              Redmond is a strong base for Smith Rock, Terrebonne, Prineville Reservoir,
+              Sisters, Bend, and Madras.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Food, Coffee, and Local Spots</h2>
+        <p>
+          Redmond’s food scene has improved a lot, especially around downtown. You can
+          find coffee shops, casual restaurants, breweries, food carts, breakfast spots,
+          pizza, Mexican food, burgers, and places that work well for families.
+        </p>
+
+        <p>
+          It is usually less hectic than Bend, which can be a real advantage. For locals,
+          Redmond often feels easier for parking, errands, casual meals, and meeting up
+          without dealing with westside Bend traffic.
+        </p>
+
+        <div class="callout">
+          <strong>Helpful tip:</strong> Downtown Redmond is worth spending time in instead
+          of treating the city like a pass-through stop. It has become one of the more
+          interesting areas in Central Oregon for casual food, drinks, and local events.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Outdoor Recreation Near Redmond</h2>
+        <p>
+          Redmond is close to some of Central Oregon’s most recognizable outdoor areas.
+          Smith Rock is the obvious one, but the city also has easy access to Dry Canyon,
+          Terrebonne, high desert roads, parks, reservoirs, and day trips in several
+          directions.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Close to Town</h3>
+            <p>
+              Dry Canyon, local parks, downtown walks, and neighborhood trails are easy
+              options without leaving Redmond.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Smith Rock Access</h3>
+            <p>
+              Redmond is one of the easiest places to stay or start from when visiting
+              Smith Rock State Park.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Regional Trips</h3>
+            <p>
+              Prineville Reservoir, Crooked River, Sisters, Bend, Madras, and Terrebonne
+              are all reasonable trips from Redmond.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Redmond Neighborhoods and Areas</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Downtown Redmond</h3>
+            <p>
+              Restaurants, coffee, bars, shops, events, and one of the best areas to
+              get a feel for Redmond’s growth.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Dry Canyon Area</h3>
+            <p>
+              Popular for walking, biking, parks, sports fields, and easy outdoor time
+              close to town.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>South Redmond</h3>
+            <p>
+              Convenient for commuting toward Bend and accessing shopping, services,
+              and newer neighborhoods.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>North Redmond</h3>
+            <p>
+              Practical access toward Terrebonne, Smith Rock, Madras, and the airport.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Airport Area</h3>
+            <p>
+              Useful for travelers, airport workers, rental cars, hotels, and quick
+              regional access.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Terrebonne Nearby</h3>
+            <p>
+              Not Redmond itself, but closely connected because of Smith Rock and the
+              short drive north.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Nearby Places From Redmond</h2>
+        <p>
+          Redmond’s central location makes it one of the easiest starting points for
+          exploring Central Oregon.
+        </p>
+
+        <div class="guide-links">
+          <a class="guide-link" href="/bend/">Bend</a>
+          <a class="guide-link" href="/sisters/">Sisters</a>
+          <a class="guide-link" href="/prineville/">Prineville</a>
+          <a class="guide-link" href="/madras/">Madras</a>
+          <a class="guide-link" href="/sunriver/">Sunriver</a>
+          <a class="guide-link" href="/la-pine/">La Pine</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Living in Redmond</h2>
+        <p>
+          Redmond has become a serious option for people who want Central Oregon access
+          without being directly in Bend. It is still growing quickly, but it often feels
+          more practical, more affordable, and easier to navigate.
+        </p>
+
+        <p>
+          The tradeoff is that some people still drive to Bend for certain restaurants,
+          jobs, events, or activities. But Redmond has its own momentum, and it continues
+          becoming a stronger city on its own.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        All Things Central Oregon is a local guide to Bend, Redmond, Sisters, Sunriver,
+        La Pine, Prineville, and the surrounding high desert.
+      </div>
+    </footer>
+  </body>
+</html>
