@@ -1,21 +1,76 @@
 ---
+// This is where your logic goes, but we'll leave it empty for now
 ---
 <html lang="en">
 	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
 		<title>All Things Central Oregon | Local Guide</title>
-		<meta name="description" content="The ultimate guide to the High Desert.">
+		<style>
+			/* This is your CSS - It lives right inside the file! */
+			body { 
+				background-color: #FAF9F6; 
+				font-family: system-ui, -apple-system, sans-serif; 
+				margin: 0; 
+				color: #3E332E; 
+			}
+			nav { 
+				background: #2D4F3E; 
+				color: white; 
+				padding: 1.5rem; 
+				text-align: center;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			}
+			.hero {
+				padding: 80px 20px;
+				text-align: center;
+			}
+			h1 { font-size: 3.5rem; margin: 0; line-height: 1.1; }
+			.accent { color: #2D4F3E; }
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 20px;
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			.card {
+				background: white;
+				padding: 30px;
+				border-radius: 15px;
+				text-decoration: none;
+				color: inherit;
+				border: 1px solid #e5e1d8;
+				transition: transform 0.2s;
+			}
+			.card:hover { transform: translateY(-5px); border-color: #2D4F3E; }
+			.card h2 { margin: 0; color: #2D4F3E; }
+		</style>
 	</head>
-	<body style="background-color: #FAF9F6; font-family: system-ui; margin: 0;">
-		<nav style="background: #2D4F3E; color: white; padding: 20px; font-weight: bold; text-transform: uppercase;">
-			All Things Central Oregon
+	<body>
+		<nav>
+			<strong>ALL THINGS CENTRAL OREGON</strong>
 		</nav>
-		<main style="padding: 40px; max-width: 800px; margin: 0 auto;">
-			<h1 style="color: #3E332E; font-size: 3rem;">High Desert Living.</h1>
-			<p style="font-size: 1.2rem; color: #666;">Select a city to explore local favorites:</p>
-			<ul style="list-style: none; padding: 0;">
-				<li style="margin: 10px 0;"><a href="/bend" style="color: #2D4F3E; font-weight: bold; text-decoration: none; font-size: 1.5rem;">Bend &rarr;</a></li>
-				<li style="margin: 10px 0;"><a href="/redmond" style="color: #2D4F3E; font-weight: bold; text-decoration: none; font-size: 1.5rem;">Redmond &rarr;</a></li>
-			</ul>
-		</main>
+		
+		<div class="hero">
+			<h1>High Desert Living, <br><span class="accent">Decoded.</span></h1>
+			<p>Your definitive local guide to the region.</p>
+		</div>
+
+		<div class="grid">
+			<a href="/bend" class="card">
+				<h2>Bend &rarr;</h2>
+				<p>Guides for the Westside, Eastside, and everywhere in between.</p>
+			</a>
+			<a href="/redmond" class="card">
+				<h2>Redmond &rarr;</h2>
+				<p>Exploring the Hub of Central Oregon.</p>
+			</a>
+			<a href="/sisters" class="card">
+				<h2>Sisters &rarr;</h2>
+				<p>Mountain views and small-town charm.</p>
+			</a>
+		</div>
 	</body>
 </html>
