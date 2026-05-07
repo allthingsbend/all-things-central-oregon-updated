@@ -1,13 +1,326 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+const title = "Sisters, Oregon Guide | Things To Do, Food, Hiking & Local Tips";
+const description = "A practical local guide to Sisters, Oregon with things to do, food, coffee, hiking, events, western charm, nearby lakes, and Central Oregon travel ideas.";
 ---
-<Layout title="Sisters Guide" description="Everything Sisters, Oregon. From the mountains to the town.">
-	<h1 style="font-size: 3rem; margin-bottom: 10px;">Sisters</h1>
-	<p style="font-style: italic; color: #2D4F3E; border-left: 4px solid #2D4F3E; padding-left: 15px; font-size: 1.2rem;">
-		"Under the watchful eye of the Three Sisters peaks."
-	</p>
-	<section style="margin-top: 40px; background: white; padding: 30px; border-radius: 12px; border: 1px solid #e5e1d8; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-		<h2>Community & Culture</h2>
-		<p>From the Quilt Show to the Rodeo, we’re documenting how to experience Sisters like a local.</p>
-	</section>
-</Layout>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://allthingscentraloregon.org/sisters/" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="logo" href="/">All Things Central Oregon</a>
+        <nav class="nav-links">
+          <a href="/bend/">Bend</a>
+          <a href="/redmond/">Redmond</a>
+          <a href="/sisters/">Sisters</a>
+          <a href="/sunriver/">Sunriver</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="kicker">Sisters, Oregon</div>
+        <h1>The Local Guide to Sisters</h1>
+        <p>
+          A practical guide to Sisters’ mountain views, western-style downtown, coffee,
+          hiking, events, lakes, scenic drives, and slower Central Oregon pace.
+        </p>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="intro-card">
+        <h2>Start Here</h2>
+        <p>
+          Sisters has one of the most recognizable settings in Central Oregon. The Three
+          Sisters mountains sit to the west, the downtown has a western-style look, and
+          the surrounding area gives you quick access to forests, lakes, trails, scenic
+          drives, and quieter outdoor days.
+        </p>
+
+        <p>
+          This page is the Sisters hub for All Things Central Oregon. Over time, it will
+          connect to deeper guides on restaurants, coffee, hiking, events, shopping,
+          lodging, lakes, camping, scenic drives, and things to do around Sisters.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Quick Sisters Guide</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Best For</h3>
+            <p>
+              Mountain views, scenic drives, hiking, coffee, small-town weekends, western
+              charm, local events, and access to forests and lakes.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Local Feel</h3>
+            <p>
+              Smaller, slower, scenic, and more relaxed than Bend, with a strong sense
+              of place and a downtown that feels different from the rest of the region.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Good To Know</h3>
+            <p>
+              Sisters can be quiet on weekdays and very busy during major events, summer
+              weekends, and popular travel periods.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Popular Sisters Guides</h2>
+        <p>
+          These are the main Sisters guides we are building out first.
+        </p>
+
+        <div class="guide-links">
+          <a class="guide-link" href="/sisters/things-to-do/">Things To Do in Sisters</a>
+          <a class="guide-link" href="/sisters/restaurants/">Best Restaurants in Sisters</a>
+          <a class="guide-link" href="/sisters/coffee/">Best Coffee Shops in Sisters</a>
+          <a class="guide-link" href="/sisters/hiking/">Best Hikes Near Sisters</a>
+          <a class="guide-link" href="/sisters/camping/">Camping Near Sisters</a>
+          <a class="guide-link" href="/sisters/shopping/">Shopping in Sisters</a>
+          <a class="guide-link" href="/sisters/events/">Sisters Events</a>
+          <a class="guide-link" href="/sisters/scenic-drives/">Scenic Drives Near Sisters</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>What Sisters Is Known For</h2>
+        <p>
+          Sisters is known for its mountain backdrop, western-style downtown, and access
+          to some of the prettiest parts of Central Oregon. It feels like a gateway town
+          in the best way: close to hiking, lakes, forests, and mountain roads, but still
+          centered around a compact downtown that is easy to explore.
+        </p>
+
+        <p>
+          It is also known for major events, including the Sisters Rodeo and Sisters
+          Outdoor Quilt Show, along with music, arts, and seasonal gatherings that bring
+          a lot of people into town.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Things To Do in Sisters by Season</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Spring</h3>
+            <p>
+              Good for downtown walks, coffee, early hikes, scenic drives, and watching
+              the area shift out of winter.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Summer</h3>
+            <p>
+              Busy weekends, major events, lake trips, camping, hiking, patios, shopping,
+              and mountain access.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Fall</h3>
+            <p>
+              Cooler hiking weather, quieter weekdays, golden light, fewer crowds, and
+              some of the best scenic drives of the year.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Winter</h3>
+            <p>
+              Quieter town days, cozy food stops, snowy mountain views, and access toward
+              Hoodoo and winter recreation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Event Weekends</h3>
+            <p>
+              Sisters can feel completely different during major events. Plan ahead for
+              parking, lodging, restaurants, and traffic through town.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Scenic Drives</h3>
+            <p>
+              Sisters is one of the best starting points for scenic Central Oregon drives,
+              especially toward McKenzie Pass when open.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Food, Coffee, and Downtown Sisters</h2>
+        <p>
+          Sisters has a compact downtown with restaurants, coffee shops, bakeries, bars,
+          galleries, shops, and local stops that are easy to explore on foot. It is a
+          good town for a slower morning, a casual lunch, or a stop before or after a
+          hike or scenic drive.
+        </p>
+
+        <p>
+          The food scene is smaller than Bend’s, but that is part of the appeal. Sisters
+          works best when you are not rushing. Grab coffee, walk downtown, browse shops,
+          and take in the mountain-town feel.
+        </p>
+
+        <div class="callout">
+          <strong>Helpful tip:</strong> Sisters gets noticeably busier during summer,
+          holiday weekends, and big events. If you want a calmer experience, visit on a
+          weekday or during shoulder season.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Outdoor Recreation Near Sisters</h2>
+        <p>
+          Sisters is surrounded by outdoor access. You can head toward the mountains,
+          forests, lakes, scenic highways, campgrounds, hiking trails, and river areas
+          without needing to go through Bend.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Close to Town</h3>
+            <p>
+              Downtown walks, nearby parks, Peterson Ridge trails, and local paths make
+              Sisters easy to enjoy without a big plan.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Mountain Access</h3>
+            <p>
+              The Three Sisters, McKenzie Pass, Hoodoo, and nearby forest roads make this
+              area a strong base for mountain trips.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Lakes and Camping</h3>
+            <p>
+              Sisters is a useful starting point for camping, lake days, backpacking, and
+              scenic forest drives west of town.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Sisters Areas and Nearby Places</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Downtown Sisters</h3>
+            <p>
+              The main area for restaurants, coffee, shopping, galleries, events, and
+              first-time visitors.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Black Butte Area</h3>
+            <p>
+              Close to resort stays, golf, forest roads, and scenic Central Oregon
+              landscapes.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Camp Sherman</h3>
+            <p>
+              A quiet, beautiful nearby area tied to the Metolius River, cabins, fishing,
+              and slower outdoor weekends.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>McKenzie Pass</h3>
+            <p>
+              One of the most scenic routes in Oregon when open, with lava fields,
+              mountain views, and dramatic high-elevation scenery.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Hoodoo Area</h3>
+            <p>
+              Winter recreation, mountain access, and a different feel than the busier
+              Mt. Bachelor side of Central Oregon.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Peterson Ridge</h3>
+            <p>
+              A popular trail system close to town for walking, running, biking, and
+              getting outside without a long drive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Nearby Places From Sisters</h2>
+        <p>
+          Sisters is a strong starting point for scenic trips across Central Oregon and
+          the east side of the Cascades.
+        </p>
+
+        <div class="guide-links">
+          <a class="guide-link" href="/bend/">Bend</a>
+          <a class="guide-link" href="/redmond/">Redmond</a>
+          <a class="guide-link" href="/sunriver/">Sunriver</a>
+          <a class="guide-link" href="/la-pine/">La Pine</a>
+          <a class="guide-link" href="/prineville/">Prineville</a>
+          <a class="guide-link" href="/madras/">Madras</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Living in Sisters</h2>
+        <p>
+          Sisters appeals to people who want Central Oregon scenery and outdoor access
+          with a smaller-town feel. It is quieter than Bend, but still close enough for
+          regional errands, airport access, events, and larger services.
+        </p>
+
+        <p>
+          The tradeoff is that housing can be expensive, services are more limited, and
+          the town can feel very busy during major events. Still, for many people, the
+          mountain views, slower pace, and strong local identity are exactly the point.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        All Things Central Oregon is a local guide to Bend, Redmond, Sisters, Sunriver,
+        La Pine, Prineville, and the surrounding high desert.
+      </div>
+    </footer>
+  </body>
+</html>
