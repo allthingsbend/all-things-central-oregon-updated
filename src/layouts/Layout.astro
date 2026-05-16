@@ -31,8 +31,37 @@ const { title, description } = Astro.props;
       <slot />
     </main>
 
-    <footer>
-      <p>&copy; 2026 All Things Central Oregon. Built by locals.</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>All Things Central Oregon</h3>
+          <p>
+            A local guide to Bend, Redmond, Sisters, Sunriver, La Pine,
+            Prineville, Madras, Terrebonne, Tumalo, Camp Sherman,
+            and the surrounding high desert.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <a href="/bend/">Bend</a>
+            <a href="/redmond/">Redmond</a>
+            <a href="/sisters/">Sisters</a>
+            <a href="/sunriver/">Sunriver</a>
+          </div>
+
+          <div>
+            <h4>Site</h4>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 All Things Central Oregon. Built locally in Oregon.</p>
+      </div>
     </footer>
   </body>
 </html>
@@ -101,13 +130,73 @@ const { title, description } = Astro.props;
     padding: 0;
   }
 
-  footer {
+  .site-footer {
+    background: #183528;
+    color: rgba(255,255,255,0.88);
     margin-top: 0;
-    padding: 40px 20px;
+  }
+
+  .footer-inner {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 4rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    max-width: 540px;
+  }
+
+  .footer-brand h3 {
+    margin: 0 0 1rem;
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  .footer-brand p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.98rem;
+    color: rgba(255,255,255,0.82);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links h4 {
+    margin: 0 0 1rem;
+    color: white;
+    font-size: 0.95rem;
+  }
+
+  .footer-links a {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: rgba(255,255,255,0.82);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .footer-links a:hover {
+    color: #f3d7a3;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 1.25rem 1rem;
     text-align: center;
-    background: #f0eee9;
-    color: #7a746e;
+  }
+
+  .footer-bottom p {
+    margin: 0;
     font-size: 0.85rem;
+    color: rgba(255,255,255,0.62);
   }
 
   @media (max-width: 750px) {
@@ -119,6 +208,15 @@ const { title, description } = Astro.props;
 
     .nav-links {
       gap: 0.9rem;
+    }
+
+    .footer-inner {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .footer-links {
+      gap: 2.5rem;
     }
   }
 </style>
