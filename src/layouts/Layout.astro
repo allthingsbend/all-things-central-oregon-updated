@@ -7,8 +7,18 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>{title} | All Things Central Oregon</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#2d4f3e" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -85,6 +95,7 @@ const { title, description } = Astro.props;
     background: rgba(45, 79, 62, 0.98);
     color: white;
     border-bottom: 3px solid #d9823b;
+    backdrop-filter: blur(10px);
   }
 
   .nav-inner {
@@ -101,9 +112,10 @@ const { title, description } = Astro.props;
     color: white;
     text-decoration: none;
     font-weight: 800;
-    font-size: 1.05rem;
-    letter-spacing: -0.01em;
+    font-size: 1.12rem;
+    letter-spacing: -0.02em;
     white-space: nowrap;
+    line-height: 1.1;
   }
 
   .nav-links {
@@ -118,6 +130,7 @@ const { title, description } = Astro.props;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
+    transition: color 0.2s ease;
   }
 
   .nav-links a:hover {
@@ -132,7 +145,7 @@ const { title, description } = Astro.props;
 
   .site-footer {
     background: #183528;
-    color: rgba(255,255,255,0.88);
+    color: rgba(255, 255, 255, 0.88);
     margin-top: 0;
   }
 
@@ -160,7 +173,7 @@ const { title, description } = Astro.props;
     margin: 0;
     line-height: 1.7;
     font-size: 0.98rem;
-    color: rgba(255,255,255,0.82);
+    color: rgba(255, 255, 255, 0.82);
   }
 
   .footer-links {
@@ -178,7 +191,7 @@ const { title, description } = Astro.props;
   .footer-links a {
     display: block;
     margin-bottom: 0.75rem;
-    color: rgba(255,255,255,0.82);
+    color: rgba(255, 255, 255, 0.82);
     text-decoration: none;
     font-size: 0.95rem;
   }
@@ -188,7 +201,7 @@ const { title, description } = Astro.props;
   }
 
   .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: 1.25rem 1rem;
     text-align: center;
   }
@@ -196,7 +209,7 @@ const { title, description } = Astro.props;
   .footer-bottom p {
     margin: 0;
     font-size: 0.85rem;
-    color: rgba(255,255,255,0.62);
+    color: rgba(255, 255, 255, 0.62);
   }
 
   @media (max-width: 750px) {
