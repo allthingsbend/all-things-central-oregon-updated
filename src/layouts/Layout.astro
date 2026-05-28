@@ -5,31 +5,22 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>{title} | All Things Central Oregon</title>
-  <meta name="description" content={description} />
-  <meta name="theme-color" content="#2d4f3e" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{title} | All Things Central Oregon</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#2d4f3e" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QKBX5WKPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6QKBX5WKPD');
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,214 +32,3 @@ const { title, description } = Astro.props;
   </head>
 
   <body>
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a href="/" class="logo">All Things Central Oregon</a>
-
-        <div class="nav-links">
-          <a href="/bend/">Bend</a>
-          <a href="/redmond/">Redmond</a>
-          <a href="/sisters/">Sisters</a>
-          <a href="/sunriver/">Sunriver</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <main>
-      <slot />
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <h3>All Things Central Oregon</h3>
-          <p>
-            A local guide to Bend, Redmond, Sisters, Sunriver, La Pine,
-            Prineville, Madras, Terrebonne, Tumalo, Camp Sherman,
-            and the surrounding high desert.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <div>
-            <h4>Explore</h4>
-            <a href="/bend/">Bend</a>
-            <a href="/redmond/">Redmond</a>
-            <a href="/sisters/">Sisters</a>
-            <a href="/sunriver/">Sunriver</a>
-          </div>
-
-          <div>
-            <h4>Site</h4>
-            <a href="/about/">About</a>
-            <a href="/contact/">Contact</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 All Things Central Oregon. Built locally in Oregon.</p>
-      </div>
-    </footer>
-  </body>
-</html>
-
-<style>
-  :global(*) {
-    box-sizing: border-box;
-  }
-
-  :global(body) {
-    background-color: #faf9f6;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    margin: 0;
-    color: #3e332e;
-  }
-
-  .site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(45, 79, 62, 0.98);
-    color: white;
-    border-bottom: 3px solid #d9823b;
-    backdrop-filter: blur(10px);
-  }
-
-  .nav-inner {
-    width: min(1200px, 92%);
-    margin: 0 auto;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-  }
-
-  .logo {
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.12rem;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-    line-height: 1.1;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-links a {
-    color: rgba(255, 255, 255, 0.92);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    color: #f3d7a3;
-  }
-
-  main {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .site-footer {
-    background: #183528;
-    color: rgba(255, 255, 255, 0.88);
-    margin-top: 0;
-  }
-
-  .footer-inner {
-    width: min(1200px, 92%);
-    margin: 0 auto;
-    padding: 4rem 0 3rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-    flex-wrap: wrap;
-  }
-
-  .footer-brand {
-    max-width: 540px;
-  }
-
-  .footer-brand h3 {
-    margin: 0 0 1rem;
-    font-size: 1.3rem;
-    color: white;
-  }
-
-  .footer-brand p {
-    margin: 0;
-    line-height: 1.7;
-    font-size: 0.98rem;
-    color: rgba(255, 255, 255, 0.82);
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 4rem;
-    flex-wrap: wrap;
-  }
-
-  .footer-links h4 {
-    margin: 0 0 1rem;
-    color: white;
-    font-size: 0.95rem;
-  }
-
-  .footer-links a {
-    display: block;
-    margin-bottom: 0.75rem;
-    color: rgba(255, 255, 255, 0.82);
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-
-  .footer-links a:hover {
-    color: #f3d7a3;
-  }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1.25rem 1rem;
-    text-align: center;
-  }
-
-  .footer-bottom p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.62);
-  }
-
-  @media (max-width: 750px) {
-    .nav-inner {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.85rem;
-    }
-
-    .nav-links {
-      gap: 0.9rem;
-    }
-
-    .footer-inner {
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    .footer-links {
-      gap: 2.5rem;
-    }
-  }
-</style>
