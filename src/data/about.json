@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "title": "About All Things Central Oregon",
+    "description": "Learn more about All Things Central Oregon, a local guide to Bend, Redmond, Sisters, Sunriver, and communities across Central Oregon."
+  },
+  "hero": {
+    "eyebrow": "About",
+    "title": "A local guide to Central Oregon.",
+    "description": "All Things Central Oregon is a place to find helpful guides, local recommendations, outdoor ideas, businesses, events, and things to do across Bend, Redmond, Sisters, Sunriver, and the surrounding area."
+  },
+  "sections": [
+    {
+      "heading": "Why this site exists",
+      "paragraphs": [
+        "Central Oregon has a lot to offer, but finding good local information can still take more time than it should. This site is built to make that easier.",
+        "The goal is to create practical, easy-to-use guides for locals, visitors, and anyone exploring the area. That includes outdoor activities, restaurants, coffee shops, local businesses, events, neighborhoods, seasonal guides, and everyday resources."
+      ],
+      "bullets": []
+    },
+    {
+      "heading": "What we cover",
+      "paragraphs": [],
+      "bullets": [
+        "Things to do in Central Oregon",
+        "Local restaurants, coffee shops, bars, and food carts",
+        "Outdoor activities, hikes, parks, lakes, rivers, and scenic spots",
+        "Events, seasonal guides, and weekend ideas",
+        "Local businesses and services",
+        "Travel ideas for Bend, Redmond, Sisters, Sunriver, and nearby communities"
+      ]
+    },
+    {
+      "heading": "Built for locals and visitors",
+      "paragraphs": [
+        "Whether you live here full time, just moved to the area, visit often, or are planning your first trip, All Things Central Oregon is meant to help you find useful information without digging through dozens of different sites.",
+        "The site will continue to grow with more guides, local resources, business features, and helpful recommendations across the region."
+      ],
+      "bullets": []
+    }
+  ],
+  "callToAction": {
+    "label": "Contact Us",
+    "url": "/contact/"
+  }
+}
