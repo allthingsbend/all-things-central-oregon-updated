@@ -137,7 +137,6 @@ content:
             required: true
 
 settings:
-  hide: true
   content:
     merge: true
   commit:
