@@ -1,5 +1,6 @@
 ---
 const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://allthingscentraloregon.org').href;
 ---
 
 <!DOCTYPE html>
@@ -21,6 +22,8 @@ const { title, description } = Astro.props;
     <title>{title} | All Things Central Oregon</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#2d4f3e" />
+    <link rel="canonical" href={canonical} />
+    <link rel="stylesheet" href="/styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,4 +42,39 @@ const { title, description } = Astro.props;
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <nav class="site-nav">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="logo" href="/">All Things Central Oregon</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="/bend/">Bend</a>
+          <a href="/redmond/">Redmond</a>
+          <a href="/sisters/">Sisters</a>
+          <a href="/sunriver/">Sunriver</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-brand">
+          <h3>All Things Central Oregon</h3>
+          <p>
+            Practical local guides to Bend, Redmond, Sisters, Sunriver, and the surrounding
+            high desert.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} All Things Central Oregon</p>
+      </div>
+    </footer>
+  </body>
+</html>
