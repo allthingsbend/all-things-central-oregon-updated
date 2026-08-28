@@ -1,6 +1,8 @@
 ---
-const title = "All Things Central Oregon | Local Guides to Bend, Redmond, Sisters & Sunriver";
-const description = "A local-style guide to Central Oregon covering Bend, Redmond, Sisters, Sunriver, La Pine, Prineville, restaurants, hikes, coffee, camping, fishing, events, and things to do.";
+import home from '../data/home.json';
+
+const title = home.seo.title;
+const description = home.seo.description;
 ---
 
 <html lang="en">
@@ -26,39 +28,27 @@ const description = "A local-style guide to Central Oregon covering Bend, Redmon
       </div>
     </header>
 
-    <section class="hero home-hero">
+    <section class:list={["hero", "home-hero", { "hero-with-image": home.hero.image }]}>
+      {home.hero.image && (
+        <div class="hero-media" aria-hidden={!home.hero.imageAlt}>
+          <img src={home.hero.image} alt={home.hero.imageAlt} />
+        </div>
+      )}
       <div class="hero-inner">
-        <div class="kicker">Central Oregon Local Guide</div>
-        <h1>Explore Bend, Redmond, Sisters, Sunriver, and the High Desert</h1>
-        <p>
-          Practical local guides for where to eat, hike, camp, fish, drink coffee,
-          spend the weekend, and make the most of life in Central Oregon.
-        </p>
+        <div class="kicker">{home.hero.eyebrow}</div>
+        <h1>{home.hero.title}</h1>
+        <p>{home.hero.description}</p>
 
         <div class="badge-row">
-          <span class="badge">Local guides</span>
-          <span class="badge">Outdoor ideas</span>
-          <span class="badge">Food & coffee</span>
-          <span class="badge">Seasonal tips</span>
+          {home.hero.badges.map((badge) => <span class="badge">{badge}</span>)}
         </div>
       </div>
     </section>
 
     <main class="container">
       <section class="intro-card">
-        <h2>Start Exploring Central Oregon</h2>
-        <p>
-          All Things Central Oregon is built for people who want more than a generic
-          travel list. This site covers the towns, trails, restaurants, coffee shops,
-          lakes, rivers, events, and everyday local details that make Central Oregon
-          worth exploring.
-        </p>
-
-        <p>
-          Start with a city guide below, then branch into deeper guides for things to do,
-          restaurants, hiking, camping, fishing, breweries, family activities, and seasonal
-          ideas.
-        </p>
+        <h2>{home.intro.heading}</h2>
+        {home.intro.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
       </section>
 
       <section class="section">

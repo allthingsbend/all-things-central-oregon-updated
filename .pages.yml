@@ -1,0 +1,149 @@
+media:
+  input: public/uploads
+  output: /uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: homepage
+    label: Homepage
+    type: file
+    path: src/data/home.json
+    format: json
+    fields:
+      - name: seo
+        label: Search and sharing
+        type: object
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            required: true
+            description: Keep this descriptive and under about 60 characters when possible.
+          - name: description
+            label: Search description
+            type: text
+            required: true
+      - name: hero
+        label: Top of page
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small heading
+            type: string
+            required: true
+          - name: title
+            label: Main heading
+            type: string
+            required: true
+          - name: description
+            label: Intro text
+            type: text
+            required: true
+          - name: image
+            label: Optional hero image
+            type: image
+            description: Leave blank to keep the current text-only hero.
+          - name: imageAlt
+            label: Image description
+            type: string
+            description: Briefly describe the image for visitors using screen readers.
+          - name: badges
+            label: Highlight labels
+            type: string
+            list:
+              min: 1
+              max: 6
+      - name: intro
+        label: Introduction card
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list:
+              min: 1
+
+  - name: about
+    label: About page
+    type: file
+    path: src/data/about.json
+    format: json
+    fields:
+      - name: seo
+        label: Search and sharing
+        type: object
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            required: true
+          - name: description
+            label: Search description
+            type: text
+            required: true
+      - name: hero
+        label: Top of page
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small heading
+            type: string
+            required: true
+          - name: title
+            label: Main heading
+            type: string
+            required: true
+          - name: description
+            label: Intro text
+            type: text
+            required: true
+      - name: sections
+        label: Page sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{heading}"
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+            required: true
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true
+          - name: bullets
+            label: Bullet points
+            type: string
+            list: true
+      - name: callToAction
+        label: Button
+        type: object
+        fields:
+          - name: label
+            label: Button text
+            type: string
+            required: true
+          - name: url
+            label: Button link
+            type: string
+            required: true
+
+settings:
+  hide: true
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      update: "content: update {name} via Pages CMS"
+      create: "content: add {name} via Pages CMS"
+      delete: "content: remove {name} via Pages CMS"
+      rename: "content: rename {oldFilename} to {newFilename} via Pages CMS"

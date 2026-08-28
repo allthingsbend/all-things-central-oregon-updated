@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "title": "All Things Central Oregon | Local Guides to Bend, Redmond, Sisters & Sunriver",
+    "description": "A local-style guide to Central Oregon covering Bend, Redmond, Sisters, Sunriver, La Pine, Prineville, restaurants, hikes, coffee, camping, fishing, events, and things to do."
+  },
+  "hero": {
+    "eyebrow": "Central Oregon Local Guide",
+    "title": "Explore Bend, Redmond, Sisters, Sunriver, and the High Desert",
+    "description": "Practical local guides for where to eat, hike, camp, fish, drink coffee, spend the weekend, and make the most of life in Central Oregon.",
+    "image": "",
+    "imageAlt": "",
+    "badges": [
+      "Local guides",
+      "Outdoor ideas",
+      "Food & coffee",
+      "Seasonal tips"
+    ]
+  },
+  "intro": {
+    "heading": "Start Exploring Central Oregon",
+    "paragraphs": [
+      "All Things Central Oregon is built for people who want more than a generic travel list. This site covers the towns, trails, restaurants, coffee shops, lakes, rivers, events, and everyday local details that make Central Oregon worth exploring.",
+      "Start with a city guide below, then branch into deeper guides for things to do, restaurants, hiking, camping, fishing, breweries, family activities, and seasonal ideas."
+    ]
+  }
+}

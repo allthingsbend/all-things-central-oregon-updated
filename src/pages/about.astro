@@ -1,64 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import about from '../data/about.json';
 ---
 
 <Layout
-  title="About All Things Central Oregon"
-  description="Learn more about All Things Central Oregon, a local guide to Bend, Redmond, Sisters, Sunriver, and communities across Central Oregon."
+  title={about.seo.title}
+  description={about.seo.description}
 >
   <main>
     <section class="page-hero">
       <div class="container narrow">
-        <p class="section-label">About</p>
-        <h1>A local guide to Central Oregon.</h1>
-        <p>
-          All Things Central Oregon is a place to find helpful guides, local recommendations,
-          outdoor ideas, businesses, events, and things to do across Bend, Redmond, Sisters,
-          Sunriver, and the surrounding area.
-        </p>
+        <p class="section-label">{about.hero.eyebrow}</p>
+        <h1>{about.hero.title}</h1>
+        <p>{about.hero.description}</p>
       </div>
     </section>
 
     <section class="intro">
       <div class="container narrow">
-        <h2>Why this site exists</h2>
+        {about.sections.map((section) => (
+          <section>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {section.bullets.length > 0 && (
+              <ul>
+                {section.bullets.map((item) => <li>{item}</li>)}
+              </ul>
+            )}
+          </section>
+        ))}
 
-        <p>
-          Central Oregon has a lot to offer, but finding good local information can still take
-          more time than it should. This site is built to make that easier.
-        </p>
-
-        <p>
-          The goal is to create practical, easy-to-use guides for locals, visitors, and anyone
-          exploring the area. That includes outdoor activities, restaurants, coffee shops, local
-          businesses, events, neighborhoods, seasonal guides, and everyday resources.
-        </p>
-
-        <h2>What we cover</h2>
-
-        <ul>
-          <li>Things to do in Central Oregon</li>
-          <li>Local restaurants, coffee shops, bars, and food carts</li>
-          <li>Outdoor activities, hikes, parks, lakes, rivers, and scenic spots</li>
-          <li>Events, seasonal guides, and weekend ideas</li>
-          <li>Local businesses and services</li>
-          <li>Travel ideas for Bend, Redmond, Sisters, Sunriver, and nearby communities</li>
-        </ul>
-
-        <h2>Built for locals and visitors</h2>
-
-        <p>
-          Whether you live here full time, just moved to the area, visit often, or are planning
-          your first trip, All Things Central Oregon is meant to help you find useful information
-          without digging through dozens of different sites.
-        </p>
-
-        <p>
-          The site will continue to grow with more guides, local resources, business features,
-          and helpful recommendations across the region.
-        </p>
-
-        <a href="/contact/" class="primary-btn">Contact Us</a>
+        <a href={about.callToAction.url} class="primary-btn">{about.callToAction.label}</a>
       </div>
     </section>
   </main>
